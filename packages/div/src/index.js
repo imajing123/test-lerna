@@ -12,7 +12,7 @@ const APPEARANCES = {
 };
 
 const StyledDiv = styled.div`
-    background-color: green;
+    background-color: blue;
     border-radius: 4px;
     color: #fff;
     cursor: pointer;
