@@ -65,5 +65,8 @@
         "stylelint-config-styled-components": "0.1.1",
         "stylelint-processor-styled-components": "1.8.0",
         "webpack": "4.39.3"
+    },
+    "publishConfig": {
+        "registry": "http://nexus.imajing:8081/repository/imajing-internal/"
     }
 }

@@ -1,26 +1,27 @@
 import styled, {css} from 'styled-components';
 import React from 'react';
 import {spacing} from 'theme';
+import Button, {SDK} from 'button';
 import PropTypes from 'prop-types';
+
+console.log(new SDK());
 
 const APPEARANCES = {
     PRIMARY: 'primary',
     SECONDARY: 'secondary'
 };
 
-console.log('aladdin');
-
-const StyledButton = styled.button`
-    background-color: yellow;
+const StyledDiv = styled.div`
+    background-color: green;
     border-radius: 4px;
     color: #fff;
     cursor: pointer;
     flex-shrink: 0;
     font-size: 0.88rem;
     font-weight: 500;
-    height: 40px;
+    height: 80px;
     line-height: 38px;
-    min-width: 200px;
+    min-width: 400px;
     outline: none;
     overflow: hidden;
     padding: 0 ${spacing.extraLarge};
@@ -52,22 +53,20 @@ const StyledButton = styled.button`
         `}
 `;
 
-const Button = (props) => <StyledButton {...props} />;
+const Div = (props) => (
+    <StyledDiv {...props}>
+        <Button></Button>
+    </StyledDiv>
+);
 
-Button.propTypes = {
+Div.propTypes = {
     disabled: PropTypes.bool.isRequired,
     variant: PropTypes.oneOf(Object.values(APPEARANCES))
 };
 
-Button.defaultProps = {
+Div.defaultProps = {
     disabled: false,
     variant: APPEARANCES.PRIMARY
 };
 
-class SDK {
-    constructor() {
-        return 'SDK';
-    }
-}
-
-export {Button as default, SDK};
+export default Div;

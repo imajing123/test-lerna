@@ -1,8 +1,11 @@
 {
-    "name": "input",
+    "name": "div",
     "version": "2.0.3",
     "main": "lib/index.js",
     "module": "src/index.js",
+    "scripts": {
+        "build": "webpack --mode production"
+    },
     "dependencies": {
         "prop-types": "15.7.2",
         "react": "16.9.0",
@@ -14,5 +17,13 @@
         "react": "^15.0.0 || ^16.0.0",
         "react-dom": "^15.0.0 || ^16.0.0",
         "styled-components": "^4.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.6.0",
+        "@babel/preset-env": "^7.6.0",
+        "@babel/preset-react": "^7.0.0",
+        "babel-loader": "^8.0.6",
+        "webpack": "^4.40.2",
+        "webpack-cli": "^3.3.9"
     }
 }
